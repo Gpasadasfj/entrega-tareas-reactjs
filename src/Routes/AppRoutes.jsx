@@ -8,13 +8,13 @@ import Ej7 from "../ejercicio7/Ej7";
 import Ej8 from "../ejercicio8/Ej8";
 import Ej9 from "../ejercicio9/Ej9";
 import Index from "../index/Index";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 export default function AppRoutes() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route index path="/" element={<Index />} />
         <Route path="ej1" element={<Ej1 />} />
         <Route path="ej2" element={<Ej2 />} />
         <Route path="ej3" element={<Ej3 />} />
@@ -25,6 +25,6 @@ export default function AppRoutes() {
         <Route path="ej8" element={<Ej8 />} />
         <Route path="ej9" element={<Ej9 />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
